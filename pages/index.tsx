@@ -16,7 +16,7 @@ import { parseEther } from 'ethers/lib/utils';
 // goerli address: 0xab1bE13Eb6179a8626d169b8Bc619B5C71fE3B23
 // mainnet address: 0x0887Ae229438Bd783Cb8bf19cF487c70176ce127
 const contractConfig = {
-  addressOrName: '0xab1bE13Eb6179a8626d169b8Bc619B5C71fE3B23',
+  addressOrName: '0x0887Ae229438Bd783Cb8bf19cF487c70176ce127',
   contractInterface: contractInterface,
 };
 
@@ -112,7 +112,7 @@ const Home: NextPage = () => {
               <h1 style={{ marginTop: 24 }}>Unpolite Pass NFT</h1>
               <ConnectButton />
             </FrontCard>
-            <BackCard isCardFlipped={!isMinted}>
+            <BackCard isCardFlipped={isMinted}>
               <div style={{ padding: 24 }}>
                 <Image
                   src="/nft.png"
