@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import type { AppProps } from 'next/app';
+import Head from "next/head"
 import {
   RainbowKitProvider,
   getDefaultWallets,
@@ -48,6 +49,9 @@ const wagmiClient = createClient({
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
+      <Head>
+        <title>Unpolite Pass</title>
+      </Head>
       <RainbowKitProvider theme={{
       lightMode: lightTheme(),
       darkMode: darkTheme(),
